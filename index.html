@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Silsilah Keluarga 🌳</title>
+    <!-- <link rel="stylesheet" href="../lib/tree_maker-min.css">
+    <script type="text/javascript" src="../lib/tree_maker-min.js"></script> -->
+    <link rel="stylesheet" href="./style/tree_maker.css">
+    <script type="text/javascript" src="./src/tree_maker.js"></script>
+</head>
+<body>
+    <div id="my_tree"></div>
+    <script type="text/javascript">
+        let tree = {
+            1: {
+                11: {
+                111: {
+                    1111: {
+                    11111: "",
+                    11112: ""
+                    },
+                    1112: {
+                    11121: "",
+                    11122: ""
+                    },
+                    1113: {
+                    11131: "",
+                    11132: "",
+                    11133: ""
+                    }
+                },
+                112: {
+                    1121: "",
+                    1122: "",
+                    1123: ""
+                },
+                113: {
+                    1131: "",
+                    1132: "",
+                    1133: ""
+                },
+                114: {
+                    1141: ""
+                },
+                115: {
+                    1151: "",
+                    1152: "",
+                    1153: ""
+                },
+                116: {
+                    1161: "",
+                    1162: ""
+                },
+                117: {
+                    1171: "",
+                    1172: ""
+                },
+                118: {
+                    1181: "",
+                    1182: ""
+                },
+                },
+                12: {
+                    121: {
+                        1211: "",
+                        1212: ""
+                    },
+                    122: {
+                        1221: "",
+                        1222: ""
+                    },
+                    123: {
+                        1231: ""
+                    },
+                },
+                13: {
+                    131: {
+                        1311: "",
+                        1312: ""
+                    },
+                    132: {
+                        1321: "",
+                        1322: ""
+                    },
+                    133: {
+                        1331: ""
+                    },
+                    134: {
+                        1341: "",
+                        1342: ""
+                    },
+                    135: {
+                        1351: "",
+                        1352: ""
+                    }
+                },
+                14: {
+                    141: {
+                        1411: "",
+                        1412: ""
+                    },
+                    142: {
+                        1421: "",
+                        1422: ""
+                    },
+                },
+                15: {
+                    151: {
+                        1511: "",
+                        1512: ""
+                    },
+                    152: {
+                        1521: ""
+                    },
+                },
+            },
+        };
+
+        let treeParams = {
+            1: {trad: 'Satiman Marto Tinoyo', spouse: 'Minem'},
+            11: {trad: 'Mulyadi', spouse: 'Tumiyem'},
+            12: {trad: 'Sri Umbuk', spouse: 'Sutiman'},
+            13: {trad: 'Jatiman Dibyo Atmojo', spouse: 'Sukarti'},
+            14: {trad: 'Sri Hartiyem', spouse: 'Sumino'},
+            15: {trad: 'Sri Setiti', spouse: 'Untung Joko Wiyono'},
+            111: {trad: 'Sri Sumarni', spouse: 'Wardiyo'},
+            112: {trad: 'Heri Sumanto', spouse: 'Karmiyati'},
+            113: {trad: 'Triyanto', spouse: 'Suharti'},
+            114: {trad: 'Isnu Wahyono', spouse: 'Suparti'},
+            115: {trad: 'Joko Saranto', spouse: 'Dewi Tri Ernawati'},
+            116: {trad: 'Sri Wahyuni', spouse: 'Joko Prasetyo'},
+            117: {trad: 'Sri Setyawati', spouse: 'Suryadi'},
+            118: {trad: 'Setyadi', spouse: 'Siti Endang Hariyanti'},
+            1111: {trad: 'Yanuarita Rintia Ningsih', spouse: 'Budi Sutrisno'},
+            1112: {trad: 'Ety Setia Ningsih', spouse: 'Tamrin Zarkasi'},
+            1113: {trad: 'Tutut Saputri', spouse: 'I Wayan Jefri Kristian'},
+            11111: {trad: 'Faiz Alhanif', spouse: 'nan'},
+            11112: {trad: 'Ghozi Alhanif', spouse: 'nan'},
+            11121: {trad: 'Fatia Nayla Asifa', spouse: 'nan'},
+            11122: {trad: 'Faza Nahla Aishwa', spouse: 'nan'},
+            11131: {trad: 'Christian Angelo', spouse: 'nan'},
+            11132: {trad: 'Christine Araselia', spouse: 'nan'},
+            11133: {trad: 'Cleon Arselio', spouse: 'nan'},
+            1121: {trad: 'Rahmat Heriyanto', spouse: 'nan'},
+            1122: {trad: 'Satriya Bayu Heriaji', spouse: 'nan'},
+            1123: {trad: 'Titis Herina Utami', spouse: 'nan'},
+            1131: {trad: 'Ketawang Kuswara Suharyanto', spouse: 'nan'},
+            1132: {trad: 'Oktanza Tyara Dwi Haryanti', spouse: 'nan'},
+            1133: {trad: 'Muhammad Chaesya Dewanto', spouse: 'nan'},
+            1141: {trad: 'Yoga Matiinu Aditomo', spouse: 'nan'},
+            1151: {trad: 'Kadya Tiara Sari', spouse: 'nan'},
+            1152: {trad: 'Pinda Permata Iedil', spouse: 'nan'},
+            1153: {trad: 'Asif Sekar Maurai', spouse: 'nan'},
+            1161: {trad: 'Muhammad Nazli Adiyatma', spouse: 'nan'},
+            1162: {trad: 'Nazwa Salsabila Putri', spouse: 'nan'},
+            1171: {trad: 'Rayhan Pangestu', spouse: 'nan'},
+            1172: {trad: 'Pawestri Khansa Mitayani', spouse: 'nan'},
+            1181: {trad: 'Muhammad Jiyad Al Ghifari', spouse: 'nan'},
+            1182: {trad: 'Nuha Shakira Qorirah', spouse: 'nan'},
+            121: {trad: 'Kristina Widyatsih', spouse: 'Kasih Winarso'},
+            122: {trad: 'Antonius Widyatmoko', spouse: 'Patricia Lilik Indriyani'},
+            123: {trad: 'Maximus Widyastono Sitompul', spouse: 'Claudia Risma Simbolon'},
+            1211: {trad: 'Probo Krismantoro', spouse: 'nan'},
+            1212: {trad: 'Sigit Dwi Karyanto', spouse: 'nan'},
+            1221: {trad: 'Octavius Rafael', spouse: 'nan'},
+            1222: {trad: 'Theresia Alica Corona', spouse: 'nan'},
+            1231: {trad: 'Imanuel Kharisma Widyastono', spouse: 'nan'},
+            131: {trad: 'Yeti Budhi Nurhaeni', spouse: 'Triyanto'},
+            132: {trad: 'Setyo Budhi Wibowo', spouse: 'Retno Dewanti'},
+            133: {trad: 'Yuri Budhi Sujalmi', spouse: 'Cahyo Widiatmo'},
+            134: {trad: 'Laksmi Budhi Wiyati', spouse: 'Wahyu Tri Nugroho'},
+            135: {trad: 'Wahyu Karyadi', spouse: 'Lestari Ningsih'},
+            1311: {trad: 'Wikan Kuncara Jati', spouse: 'nan'},
+            1312: {trad: 'Gani Wikan Aryasa', spouse: 'nan'},
+            1321: {trad: 'Salsa Bila Destina Putri', spouse: 'nan'},
+            1322: {trad: 'Nabilla Destina Putri', spouse: 'nan'},
+            1331: {trad: 'Tristan Aryasatya Widiatmo', spouse: 'nan'},
+            1341: {trad: 'Previa Ailsa Nathanneila', spouse: 'nan'},
+            1342: {trad: 'Kenzo Oswald', spouse: 'nan'},
+            1351: {trad: 'Jalu Putra Aji ', spouse: 'nan'},
+            1352: {trad: 'Neptu Yuan Reswari', spouse: 'nan'},
+            141: {trad: 'Wiwin Tyas Istikowati', spouse: 'Sunardi'},
+            142: {trad: 'Wiyanti Budi Lestari', spouse: 'Wolter Benedicto Andrika Bei'},
+            1411: {trad: 'Embun Nabila', spouse: 'nan'},
+            1412: {trad: 'Zenith', spouse: 'nan'},
+            1421: {trad: 'Wistara Bima Zehan Bei', spouse: 'nan'},
+            1422: {trad: 'Wiyakta Beryl Ziyan Bei', spouse: 'nan'},
+            151: {trad: 'Mustika Santi Rahayu', spouse: 'Nur Kholis'},
+            152: {trad: 'Pramesthi Nugroho', spouse: 'Sri Wahyuningsih'},
+            1511: {trad: 'Muhammad Zeva Maulana', spouse: 'nan'},
+            1512: {trad: 'Rifda Alodia Pavita', spouse: 'nan'},
+            1521: {trad: 'Guardiansyah Dermawan Nugroho', spouse: 'nan'}
+        };
+
+        treeMaker(tree, {
+            id: 'my_tree', card_click: function (element) {
+                var modal = document.getElementById("my_modal");
+                var close = document.getElementsByClassName("close")[0];
+                var id = parseInt(element.id.replace(/(card_)/, ''));
+
+                console.log(treeParams[id]['spouse']);
+                modal.style.display = "block";
+                document.getElementById("name_info").innerText = treeParams[id]['trad'];
+                document.getElementById("spouse_info").innerText = treeParams[id]['spouse'];
+
+                // When the user clicks on <span> (x), close the modal
+                close.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            },
+            treeParams: treeParams,
+            'link_width': '4px',
+            'link_color': '#2199e8',
+        });
+    </script>
+
+    <div id="my_modal" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>
+                <div>
+                    Nama: <span id="name_info"></span>
+                </div>
+                <div>
+                    Pasangan: <span id="spouse_info"></span>
+                </div>
+            </p>
+        </div>
+      
+      </div>
+</body>
+</html>

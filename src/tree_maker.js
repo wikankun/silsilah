@@ -34,7 +34,8 @@ function treeMaker(tree, params) {
     card.id = 'tree__container__step__card__first';
     treeContainer.appendChild(card);
     let trad = treeParamas[Object.keys(tree)[0]] !== undefined && treeParamas[Object.keys(tree)[0]].trad !== undefined ? treeParamas[Object.keys(tree)[0]].trad : Object.keys(tree)[0].trad;
-    card.innerHTML = '<p class="tree__container__step__card__p" id="card_' + Object.keys(tree)[0] + '">' + trad + '</p>';
+    let male = treeParamas[Object.keys(tree)[0]] !== undefined && treeParamas[Object.keys(tree)[0]].male == true ? 'male' : 'female';
+    card.innerHTML = '<p class="tree__container__step__card__p ' + male + '" id="card_' + Object.keys(tree)[0] + '">' + trad + '</p>';
 
     addStyleToCard(treeParamas[Object.keys(tree)[0]], Object.keys(tree)[0]);
 
@@ -74,8 +75,9 @@ function iterate(tree, start = false, from = '') {
     for (const key in tree) {
 
         let textCard = treeParamas[key] !== undefined && treeParamas[key].trad !== undefined ? treeParamas[key].trad : key;
+        let male = treeParamas[key] !== undefined && treeParamas[key].male == true ? 'male' : 'female';
 
-        treeContainer.innerHTML += '<div class="tree__container__step"><div class="tree__container__step__card" id="' + key + '"><p id="card_' + key + '" class="tree__container__step__card__p">' + textCard + '</p></div></div>';
+        treeContainer.innerHTML += '<div class="tree__container__step"><div class="tree__container__step__card" id="' + key + '"><p id="card_' + key + '" class="tree__container__step__card__p ' + male + '">' + textCard + '</p></div></div>';
         addStyleToCard(treeParamas[key], key);
         if ('' !== from && !start) {
             let newpath = document.createElementNS("http://www.w3.org/2000/svg", "path");
